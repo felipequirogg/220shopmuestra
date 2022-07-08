@@ -3,7 +3,7 @@
     height: 40px;
     margin-top: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: map-get($justify , center);
     align-items: center;
     border: solid 1px $colorNegro;
 

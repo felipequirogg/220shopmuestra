@@ -10,7 +10,7 @@
     width: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: map-get($justify , center);
     align-items: center;
 }
 
@@ -29,7 +29,7 @@
     margin: 5px;
     border-top: 1px solid $colorNegro;
     display: flex;
-    justify-content: space-between;
+    justify-content:map-get($justify , around );
     margin-top: 100px;
 }
 .redes {

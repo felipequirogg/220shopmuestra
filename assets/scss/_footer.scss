@@ -4,7 +4,7 @@
     margin: 5px;
     border-top: 1px solid $colorNegro;
     display: flex;
-    justify-content: space-between;
+    justify-content: map-get($justify , between);
 
     .redes {
         list-style: none;

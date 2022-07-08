@@ -28,7 +28,7 @@
     grid-area: botones;
     display: grid;
     grid-template-columns: 800px 630px;
-    justify-content: center;
+    justify-content: map-get($justify , center);
     align-items: center;
     padding: 40px;
 
@@ -45,7 +45,7 @@
     margin: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: map-get($justify , center);
     align-items: center;
     background-image: url(../img/foto.jpg);
 
@@ -74,11 +74,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: map-get($justify , around);
 
     .tarjeta__titulo {
         text-decoration: none;
         color: black;
+        text-decoration: underline;
     }
 
     .tarjeta1 {
@@ -93,14 +94,17 @@
         background-color: #d9d9d9;
         transition: all 1s;
 
-        .tarjeta__titulo2 {
-            width: 150px;
-            text-decoration: none;
-            color: black;
-        }
-
         .tarjeta__imagen {
             max-width: 222px;
+        }
+
+        .tarjeta__descripcion {
+            font-size: 10px;
+        }
+
+        .tarjeta__descripcion2 {
+            @extend .tarjeta__descripcion;
+            font-size: 15px;
         }
     }
 
@@ -130,13 +134,12 @@
         animation-name: opacidad;
         animation-duration: 1s;
         text-align: center;
-        justify-content: center;
+        justify-content: map-get($justify , center);
         padding: 70px;
     }
 
     .noticiero {
-        display: grid;
-        grid-template-columns: 50% 50%;
+        @include PropiedadesFlex(flex, row, wrap, space-around, center);
 
         .noticia1 {
             width: 920px;

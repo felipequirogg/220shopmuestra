@@ -46,6 +46,8 @@
   padding: 10px;
   display: flex;
   justify-content: space-around;
+  text-decoration: none;
+  color: black;
 }
 .cajas .preciosmen {
   font-size: 20px;
@@ -55,6 +57,8 @@
   padding: 10px;
   display: flex;
   justify-content: space-around;
+  text-decoration: none;
+  color: black;
 }
 
 .input2 {
@@ -63,6 +67,30 @@
   height: 305px;
   padding: 7px;
   margin: 30px;
+}
+
+.justify-content-start {
+  justify-content: start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
 }
 
 .navbar {
@@ -189,6 +217,7 @@
 .tarjetas .tarjeta__titulo {
   text-decoration: none;
   color: black;
+  text-decoration: underline;
 }
 .tarjetas .tarjeta1 {
   font-size: 10px;
@@ -202,13 +231,14 @@
   background-color: #d9d9d9;
   transition: all 1s;
 }
-.tarjetas .tarjeta1 .tarjeta__titulo2 {
-  width: 150px;
-  text-decoration: none;
-  color: black;
-}
 .tarjetas .tarjeta1 .tarjeta__imagen {
   max-width: 222px;
+}
+.tarjetas .tarjeta1 .tarjeta__descripcion, .tarjetas .tarjeta1 .tarjeta__descripcion2 {
+  font-size: 10px;
+}
+.tarjetas .tarjeta1 .tarjeta__descripcion2 {
+  font-size: 15px;
 }
 .tarjetas .tarjeta:hover {
   transform: scale(1.1);
@@ -236,8 +266,11 @@
   padding: 70px;
 }
 .naticias .noticiero {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .naticias .noticiero .noticia1 {
   width: 920px;
@@ -330,7 +363,7 @@
   margin: 5px;
   border-top: 1px solid #000;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 100px;
 }
 
@@ -353,17 +386,129 @@
   color: #000;
 }
 
-/* Animacion */
-@keyframes opacidad {
-  0% {
-    opacity: 0;
+/* Media Mobile */
+@media (max-width: 560px) {
+  .imagentitulo {
+    width: 200px;
   }
-  100% {
-    opacity: 1;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .navbar ul {
+    margin: 150px;
+  }
+
+  .buscar {
+    margin: 20px;
+  }
+
+  .cgrande {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .compras {
+    width: 350px;
+  }
+
+  .trending {
+    padding: 0%;
+  }
+
+  .tarjeta {
+    margin: 0%;
+    padding: 0%;
+    max-width: 130px;
+  }
+
+  .tarjeta__titulo2 {
+    width: 100px;
+  }
+
+  .tarjeta__imagen {
+    max-width: 100px;
+  }
+
+  .noticias {
+    padding: 0%;
+    margin-top: 90px;
+  }
+
+  .noticiero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .noticia1 {
+    max-width: 270px;
+    height: 340px;
+  }
+
+  .titulo__noticia {
+    max-width: 250px;
+    font-size: 14px;
+  }
+
+  .imagen__noticia {
+    max-width: 250px;
+    padding: 0%;
+  }
+
+  .texto__noticia {
+    margin: 0px;
+    max-width: 250px;
+    font-size: 10px;
+  }
+
+  .todo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .redes {
+    gap: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .formulario {
+    padding: 0%;
+    margin: 20px;
+  }
+
+  /* Productos */
+  .main__main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sneaker {
+    margin: 10px;
+    font-size: 10px;
+    width: 530px;
+    height: 380px;
+  }
+
+  .sneaker2 {
+    margin: 10px;
+    font-size: 10px;
+    width: 520px;
+    height: 380px;
+  }
+
+  .edit__imagen {
+    width: 500px;
   }
 }
-/* Media Mobile */
-@media (max-width: 567px) {
+@media (max-width: 760px) {
   .imagentitulo {
     width: 200px;
   }
@@ -413,6 +558,11 @@
 
   .tarjeta__imagen {
     max-width: 100px;
+  }
+
+  .naticias {
+    display: flex;
+    flex-direction: column;
   }
 
   .noticias {
@@ -707,5 +857,14 @@
 
   .edit__imagen {
     width: 500px;
+  }
+}
+/* Animacion */
+@keyframes opacidad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
